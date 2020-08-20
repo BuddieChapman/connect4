@@ -24,7 +24,7 @@ function Bot(){
 	this.easy = function(color){
 		let start = 0
 		if(Date.now() - lastTimePlayed > playDelay){
-			minimax(5, color)
+			minimax(6, color)
 			console.log(best)
 			attemptPlay(best)
 			console.log(scoreWinningPositions(RED))
