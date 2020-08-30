@@ -1,3 +1,4 @@
+let difficultySelect = document.getElementById("difficulty-select")
 
 
 function _playRandom(){
@@ -23,8 +24,9 @@ function Bot(){
 	
 	this.easy = function(color){
 		let start = 0
+		let difficulty = difficultySelect.value;
 		if(Date.now() - lastTimePlayed > playDelay){
-			minimax(6, color)
+			minimax(difficulty, color)
 			console.log(best)
 			attemptPlay(best)
 			console.log(scoreWinningPositions(RED))

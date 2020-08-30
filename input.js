@@ -7,7 +7,6 @@ window.addEventListener("mousemove", function(evt){
 	let columnWidth = TRAY_WIDTH / 7
 	mouseX = evt.clientX-canvas.getBoundingClientRect().x
 	mouseY = evt.clientY;
-	console.log(mouseY);
 	if(mouseX < TRAY_POS.x) mouseX = TRAY_POS.x
 	if(mouseX >= TRAY_POS.x + TRAY_WIDTH) mouseX = TRAY_POS.x + TRAY_WIDTH - 1
 	selectedColumn = Math.floor((mouseX-TRAY_POS.x) / columnWidth)
