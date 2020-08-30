@@ -100,9 +100,21 @@ function Bot(){
 	function scoreWinningPositions(player){
 		let winningPositions = gametray.getWinningPositions()
 		return winningPositions.reduce((acc, pos) => {
+			if(pos.row < 5){
+				let opponent = player == RED ? BLACK : RED
+				pos2 = {col: pos.col, row: pos.row+1, color: opponent}
+				if(isPosEqual(pos, pos2)) return 0;
+			}
 			if(pos.color == player) return acc + 1
 			return acc - 1
 		}, 0)
+	}
+
+	function isPosEqual(pos1, pos2, color){
+		if(pos1.col != pos2.col) return false;
+		if(pos1.row != pos2.row) return false;
+		if(pos1.color != pos2.color) return false;
+		return true;
 	}
 }
 
