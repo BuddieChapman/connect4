@@ -34,30 +34,32 @@ function Bot(){
 	}
 
 	// the maximizing player is assumed to be the player who's turn it is
-	function minimax(depth, playerTurn){
+	function minimax(depth, playerTurn, minmax=10000){
 		if(depth == 0 || gametray.getWinner() || gametray.isFull()){
 			return getScore(tokens[0].getColor())
 		}
 		let scores = []
 		if(playerTurn == tokens[0].getColor()){ // maximizing player
-			for(let i = 0; i < 7; ++i){
-				if(gametray.play(i, playerTurn)){
-					scores.push(minimax(depth-1, playerTurn == RED ? BLACK : RED))
+			for(let i = 2; i < 9; ++i){
+				if(gametray.play(i%7, playerTurn)){
+					scores.push(minimax(depth-1, playerTurn == RED ? BLACK : RED, Math.max(-10000, ...scores)))
 					gametray.undo()
 				}else{
 					scores.push(-10000)
 				}
+				if(scores[scores.length-1] >= minmax) break;
 			}
-			best = scores.findIndex((score) => score == Math.max(...scores))
+			best = (scores.findIndex((score) => score == Math.max(...scores))+2)%7
 			return Math.max(...scores)
 		}else{ //minimizing player
-			for(let i = 0; i < 7; ++i){
-				if(gametray.play(i, playerTurn)){
-					scores.push(minimax(depth-1, playerTurn == RED ? BLACK : RED))
+			for(let i = 2; i < 9; ++i){
+				if(gametray.play(i%7, playerTurn)){
+					scores.push(minimax(depth-1, playerTurn == RED ? BLACK : RED, Math.min(10000, ...scores)))
 					gametray.undo()
 				}else{
 					scores.push(10000)
 				}
+				if(scores[scores.length-1] <= minmax) break;
 			}
 			return Math.min(...scores)
 		}
