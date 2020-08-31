@@ -101,4 +101,6 @@ function resetGame(){
 		tokens[i].drop()
 	}
 	gametray.clearTray()
+	nextTurn = BLACK
+	tokens[0] = new Token(RED)
 }
