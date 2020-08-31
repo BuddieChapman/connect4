@@ -1,5 +1,9 @@
 let difficultySelect = document.getElementById("difficulty-select")
-
+difficultySelect.addEventListener('change', (event) => {
+	if(event.target.value == 8){
+		resetGame()
+	}
+})
 
 function _playRandom(){
 	if(gametray.isFull() || gametray.getWinner()) return false

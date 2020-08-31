@@ -22,8 +22,12 @@ window.addEventListener("mousedown", () => {
 
 window.addEventListener("keydown", function(evt){
 	if(evt.key == 'u'){
+		if(difficultySelect.value == 8) {
+			alert("You can't undo againt Chad :)")
+			return
+		}
 		undo()
-		undo();
+		undo()
 	}
 	if(evt.key == 'b'){
 		bot.easy(tokens[0].getColor())
