@@ -6,9 +6,15 @@
 	<link href = "index.css" rel = "stylesheet">
 </head>
 <body>
+	<h1>Connect Four</h1>
 	<canvas id="canvas"></canvas>
 	<br>
-	<label for="difficulty">Difficulty</label>
+
+	<div id= "selectionsMenu">
+
+<div id = "difficultyLabel">
+	<label for="difficulty">Difficulty Level:</label>
+
 	<select name="difficulty" id="difficulty-select">
 		<option value="1">Damian</option>
 		<option value="2">Buddie</option>
@@ -19,7 +25,22 @@
 		<option value="7">7</option>
 		<option value="8">Chad</option>
 	</select>
+</div>	
+
+<div id = "playerSelect">
+	<label for="players">Players:</label>
+
+	<select name="players" id="player-select">
+		<option value="1">One Player</option>
+		<option value="2">Two Players</option>
+	</select>
+</div>
+		
+	<button id= "restartButton">RESTART</button>
 	
+</div>
+
+
 	<!-- Load scripts after html -->
 	<script src="token.js"></script>
 	<script src="gametray.js"></script>

@@ -1,1 +1,68 @@
-canvas{border: 3px solid;}
+h1 {
+    text-align: center;
+    margin-top: 2vh;
+    font-family: Comic Sans MS;
+    font-size: 300%;
+}
+
+#canvas {
+    background-color: rgb(230, 216, 98);
+    border: 3px solid;
+    width: 80%;
+    margin: 10%;
+    margin-top: 1vh;
+    padding-top: 3vh;
+    
+}
+
+#difficultyLabel {
+    border: 3px solid;
+    text-align: center;
+    margin: 2%;  /*How far the Difficulty box is away from the canvas box*/
+    font-size: 2vw;
+    width:35%;
+    padding: 1%;
+    background-color: rgb(142, 190, 164);
+    font-family: Comic Sans MS;
+    display: inline;
+}
+
+#difficulty-select, #player-select {
+    font-size: 2vw;
+}
+
+#playerSelect {
+    border: 3px solid;
+    text-align: center;
+    margin: 2%;  /*How far the Difficulty box is away from the canvas box*/
+    font-size: 2vw;
+    width:30%;
+    padding: 1%;
+    background-color: rgb(142, 190, 164);
+    font-family: Comic Sans MS; 
+    display: inline;
+    
+}
+
+#restartButton {
+    border: 3px solid;
+    text-align: center;
+    margin: 2%;  
+    font-size: 2vw;
+    width:15%;
+    padding: 1%;
+    background-color: rgb(142, 190, 164);
+    font-family: Comic Sans MS; 
+    display: inline;
+    
+}
+
+#selectionsMenu {
+    width: 80%;
+    background-color: #34925f;
+    border: 3px solid;
+    margin: 10%;
+    margin-top: -8%;
+    text-align: center;
+    
+}
