@@ -20,7 +20,6 @@ h1 {
     text-align: center;
     margin: 2%;  /*How far the Difficulty box is away from the canvas box*/
     font-size: 2vw;
-    width:35%;
     padding: 1%;
     background-color: rgb(142, 190, 164);
     font-family: Comic Sans MS;
@@ -36,7 +35,7 @@ h1 {
     text-align: center;
     margin: 2%;  /*How far the Difficulty box is away from the canvas box*/
     font-size: 2vw;
-    width:30%;
+    
     padding: 1%;
     background-color: rgb(142, 190, 164);
     font-family: Comic Sans MS; 
@@ -49,7 +48,7 @@ h1 {
     text-align: center;
     margin: 2%;  
     font-size: 2vw;
-    width:15%;
+    
     padding: 1%;
     background-color: rgb(142, 190, 164);
     font-family: Comic Sans MS; 
@@ -62,7 +61,7 @@ h1 {
     background-color: #34925f;
     border: 3px solid;
     margin: 10%;
-    margin-top: -8%;
+    margin-top: 0%;
     text-align: center;
     
 }

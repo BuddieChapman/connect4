@@ -21,7 +21,7 @@ function Token(tokenColor = BLACK){
 	
 	this.drawToken = function(){
 		if(color == RED){
-			ctx.fillStyle = 'red'
+			ctx.fillStyle = "rgb(228, 78, 58)"
 		}else{
 			ctx.fillStyle = 'black'
 		}
