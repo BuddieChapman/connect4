@@ -3,15 +3,24 @@
 <head>
 	<title>Connect 4</title>
 	<meta charset="utf-8">
-	<style>canvas{border: 1px solid;}</style>
+	<link rel="icon" href="/favpng.png">
+	<link href = "index.css" rel = "stylesheet" >
+	<script src="https://kit.fontawesome.com/a2ce8de9d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<i class="fas fa-gamepad"></i>
+	<h1>Connect Four</h1>
 	<canvas id="canvas"></canvas>
 	<br>
-	<label for="difficulty">Difficulty</label>
+
+	<div id= "selectionsMenu">
+
+<div id = "difficultyLabel">
+	<label for="difficulty">Difficulty Level:</label>
+
 	<select name="difficulty" id="difficulty-select">
 		<option value="1">Damian</option>
-		<option value="2">2</option>
+		<option value="2">Buddie</option>
 		<option value="3">3</option>
 		<option value="4">4</option>
 		<option value="5">5</option>
@@ -19,7 +28,22 @@
 		<option value="7">7</option>
 		<option value="8">Chad</option>
 	</select>
-	
+</div>	
+
+<div id = "playerSelect">
+	<label for="players">Players:</label>
+
+	<select name="players" id="player-select">
+		<option value="1">One Player</option>
+		<option value="2">Two Players</option>
+	</select>
+</div>
+		
+	<button id= "restartButton">RESTART</button>
+
+</div>
+
+
 	<!-- Load scripts after html -->
 	<script src="token.js"></script>
 	<script src="gametray.js"></script>
