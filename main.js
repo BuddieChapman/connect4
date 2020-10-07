@@ -1,6 +1,3 @@
-const GAME_WIDTH = 800
-const GAME_HEIGHT = 400
-
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 canvas.setAttribute('width', GAME_WIDTH)

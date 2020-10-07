@@ -1,3 +1,6 @@
+const GAME_WIDTH = 800
+const GAME_HEIGHT = 400
+
 const TRAY_BUFFER = 7 // space between tokens in tray
 const TRAY_WIDTH = 7*TOKEN_DIAMETER + 8*TRAY_BUFFER
 const TRAY_HEIGHT = 6*TOKEN_DIAMETER + 2*TRAY_BUFFER
